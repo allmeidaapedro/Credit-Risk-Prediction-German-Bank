@@ -26,25 +26,33 @@ def sns_plots(data, features, histplot=True, countplot=False,
               barplot=False, barplot_y=None, boxplot=False, 
               boxplot_x=None, outliers=False, kde=False, 
               hue=None):
-    """
-    Generate a grid of Seaborn plots for visualizing multiple features of a dataset.
+    '''
+    Generate Seaborn plots for visualization.
+
+    This function generates various types of Seaborn plots based on the provided
+    data and features. Supported plot types include histograms, count plots,
+    bar plots, box plots, and more.
 
     Args:
-        data (DataFrame): The dataset to visualize.
-        features (list): List of feature names to visualize.
-        histplot (bool, optional): If True, generate histogram plots. Default is True.
-        countplot (bool, optional): If True, generate count plots. Default is False.
-        barplot (bool, optional): If True, generate bar plots. Default is False.
-        barplot_y (str, optional): The y feature for bar plots. Required if barplot is True.
-        boxplot (bool, optional): If True, generate box plots. Default is False.
-        boxplot_x (str, optional): The x feature for box plots. Required if boxplot is True.
-        outliers (bool, optional): If True, show outliers in box plots. Default is False.
-        kde (bool, optional): If True, show kernel density estimate in histogram plots. Default is False.
-        hue (str, optional): Feature to group plots by color (hue). Default is None.
+        data (DataFrame): The DataFrame containing the data to be visualized.
+        features (list): A list of feature names to visualize.
+        histplot (bool, optional): Generate histograms. Default is True.
+        countplot (bool, optional): Generate count plots. Default is False.
+        barplot (bool, optional): Generate bar plots. Default is False.
+        barplot_y (str, optional): The name of the feature for the y-axis in bar plots.
+        boxplot (bool, optional): Generate box plots. Default is False.
+        boxplot_x (str, optional): The name of the feature for the x-axis in box plots.
+        outliers (bool, optional): Show outliers in box plots. Default is False.
+        kde (bool, optional): Plot Kernel Density Estimate in histograms. Default is False.
+        hue (str, optional): The name of the feature to use for color grouping. Default is None.
 
     Returns:
         None
-    """
+
+    Raises:
+        CustomException: If an error occurs during the plot generation.
+
+    '''
     
     try:
         num_features = len(features)
@@ -83,31 +91,27 @@ def sns_plots(data, features, histplot=True, countplot=False,
 
 
 def check_outliers(data, features):
-    """
-    Check for outliers in the given dataset features using the Interquartile Range (IQR) method.
+    '''
+    Check for outliers in the given dataset features.
 
-    This function calculates the IQR and identifies outliers based on lower and upper bounds.
-    It then provides statistics about the number and percentage of outliers for each feature.
+    This function calculates and identifies outliers in the specified features
+    using the Interquartile Range (IQR) method.
 
     Args:
-        data (pandas.DataFrame): The dataset containing the data to be analyzed.
-        features (list): List of feature names for which outliers will be checked.
+        data (DataFrame): The DataFrame containing the data to check for outliers.
+        features (list): A list of feature names to check for outliers.
 
     Returns:
-        tuple: A tuple containing three dictionaries:
-               - Dictionary of outlier indexes for each feature.
-               - Dictionary of outlier counts for each feature.
-               - Total count of outliers in the dataset.
+        tuple: A tuple containing three elements:
+            - outlier_indexes (dict): A dictionary mapping feature names to lists of outlier indexes.
+            - outlier_counts (dict): A dictionary mapping feature names to the count of outliers.
+            - total_outliers (int): The total count of outliers in the dataset.
 
-    Note:
-        - The IQR method is used to identify outliers based on lower and upper bounds.
-        - Outliers are detected if the feature values fall below the lower bound or above the upper bound.
-        - The calculated IQR bounds use a factor of 1.5 times the IQR value.
+    Raises:
+        CustomException: If an error occurs while checking for outliers.
 
-    Example:
-        outlier_indexes, outlier_counts, total_outliers = check_outliers(data=my_data, features=['Age', 'Income'])
-    """
-
+    '''
+    
     try:
     
         outlier_counts = {}
