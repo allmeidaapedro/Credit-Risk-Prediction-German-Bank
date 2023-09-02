@@ -42,6 +42,7 @@ def evaluate_models_cv(models, X_train, y_train):
     pd.DataFrame: A DataFrame containing the evaluation results for each model, including their average validation scores
                   and training scores.
     '''
+
     try:
         # Stratified KFold in order to maintain the target proportion on each validation fold - dealing with imbalanced target.
         n_folds = 5
@@ -143,7 +144,6 @@ def evaluate_classifier(y_true, y_pred):
     '''
 
     try:
-    
         # Classification report
         print(classification_report(y_true=y_true, y_pred=y_pred))
         
@@ -261,7 +261,6 @@ def get_threshold_metrics(precision, recall, threshold, target_metric, target_me
     '''
     
     try:
-
         if target_metric == 'recall':
             recall_array = np.asarray(recall)
             target_value_index = np.where(recall_array[:-1] == target_metric_value)[0][0]
