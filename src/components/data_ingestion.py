@@ -123,25 +123,3 @@ class DataIngestion:
         except Exception as e:
             raise CustomException(e, sys)
         
-if __name__ == '__main__':
-
-    # Splitting the data into train and test sets with stratified split.
-    # Artifacts: train, test.
-    data_ingestion = DataIngestion()
-    train, test = data_ingestion.apply_data_ingestion()
-
-    # Apply all the preprocessing steps required. Including drop variables and preprocessor
-    # fitting and transforming. Get train and test prepared sets.
-    # Artifacts: preprocessor.
-    data_transformation = DataTransformation()
-    train_prepared, test_prepared, _ = data_transformation.apply_data_transformation(train, test)
-
-    # Train and save the best model using the best hyperparameters found during the modelling
-    # notebook analysis using stratified k-fold cross validation along with bayesian optimization.
-    # Artifacts: model
-    model_trainer = ModelTrainer()
-    class_report, auc_score = model_trainer.apply_model_trainer(train_prepared, test_prepared)
-    print('Final model classification report:')
-    print(f'\n{class_report}')
-    print(f'\nFinal model roc-auc score:')
-    print(auc_score)
