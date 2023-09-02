@@ -74,7 +74,7 @@ class PredictPipeline:
             prepared_data = preprocessor.transform(features)
 
             # Predict using the threshold that provided a recall score of 0.8 in the modelling notebook.
-            THRESHOLD = 0.396079393065796
+            THRESHOLD = 0.4224485502220887
             predicted_probas = model.predict_proba(prepared_data)
             prediction = (predicted_probas[:, 1] >= THRESHOLD).astype(int)
 
