@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Bank - Credit Risk Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: #003366;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+        }
+
+        .prediction-container {
+            flex-grow: 1;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #002855;
+        }
+
+        #prediction-result {
+            text-align: center;
+            font-size: 40px; 
+            color: #002855; 
+            margin-top: 3rem; 
+            padding: 2rem 0;
+        }
+
+        .prediction-value {
+            font-weight: bold;
+            color: #007bff;
+            margin-left: 5px; 
+        }
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('credit-form');
+            const predictionResult = document.getElementById('prediction-result');
+
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault(); 
+
+                const formData = new FormData(form);
+
+                const response = await fetch('/predictdata', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.text();
+                predictionResult.innerHTML = result;
+
+                
+                form.reset();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>German Bank</h1>
+        <p>Credit Risk Analysis</p>
+    </header>
+    <div class="container">
+        <h2>Credit Application Form</h2>
+        <form id="credit-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="sex">Gender:</label>
+            <select id="sex" name="sex" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            
+            <label for="job">Job:</label>
+            <select id="job" name="job" required>
+                <option value="" disabled selected>Select job</option>
+                <option value="0">Unskilled and non-resident</option>
+                <option value="1">Unskilled and resident</option>
+                <option value="2">Skilled</option>
+                <option value="3">Highly skilled</option>
+            </select>
+            <label for="housing">Housing:</label>
+            <select id="housing" name="housing" required>
+                <option value="" disabled selected>Select Housing</option>
+                <option value="own">Own</option>
+                <option value="rent">Rent</option>
+                <option value="free">Free</option>
+            </select>
+            
+            <label for="saving_accounts">Saving Accounts:</label>
+            <select id="saving_accounts" name="saving_accounts" required>
+                <option value="" disabled selected>Select Saving Accounts</option>
+                <option value="little">Little</option>
+                <option value="moderate">Moderate</option>
+                <option value="rich">Rich</option>
+                <option value="quite rich">Quite Rich</option>
+            </select>
+            
+            <label for="checking_account">Checking Account:</label>
+            <select id="checking_account" name="checking_account" required>
+                <option value="" disabled selected>Select Checking Account</option>
+                <option value="little">Little</option>
+                <option value="moderate">Moderate</option>
+                <option value="rich">Rich</option>
+            </select>
+            
+            <label for="credit_amount">Credit Amount:</label>
+            <input type="number" id="credit_amount" name="credit_amount" required>
+            
+            <label for="duration">Duration (months):</label>
+            <input type="number" id="duration" name="duration" required>
+            
+            <label for="purpose">Purpose:</label>
+            <select id="purpose" name="purpose" required>
+                <option value="" disabled selected>Select Purpose</option>
+                <option value="car">Car</option>
+                <option value="furniture/equipment">Furniture/Equipment</option>
+                <option value="radio/TV">Radio/TV</option>
+                <option value="domestic appliances">Domestic Appliances</option>
+                <option value="repairs">Repairs</option>
+                <option value="education">Education</option>
+                <option value="business">Business</option>
+                <option value="vacation/others">Vacation/others</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="prediction-container">
+        <h2 id="prediction-result">
+            Predict customer's risk <span class="prediction-value">{{ prediction }}</span>
+        </h2>
+        <div style="text-align: center; margin-top: 2rem;">
+            <button class="predict-button" onclick="window.location.href='/'">Home Page</button>
+        </div>
+    </div>
+</body>
+</html>
