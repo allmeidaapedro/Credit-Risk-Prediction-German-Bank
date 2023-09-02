@@ -29,7 +29,7 @@ class TrainPipeline:
     def __init__(self) -> None:
         pass
 
-    def train(self):
+    def train(self, data_ingestion, data_transformation, model_trainer):
         '''Execute the training pipeline.
 
         This method performs the following steps:
@@ -43,7 +43,7 @@ class TrainPipeline:
             CustomException: If an error occurs during the training pipeline.
 
         '''
-        
+
         try:
         
             logging.info('Train full pipeline started.')
@@ -82,5 +82,6 @@ class TrainPipeline:
 
 if __name__ == '__main__':
     
+    # Full train pipeline using the components.
     train_pipeline = TrainPipeline()
     train_pipeline.train()
