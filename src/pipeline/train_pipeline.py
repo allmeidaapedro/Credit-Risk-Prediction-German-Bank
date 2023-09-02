@@ -59,33 +59,31 @@ class TrainPipeline:
         try:
             logging.info('Train full pipeline started.')
 
-            logging.info('Splitting the data into train and test sets with data_ingestion component.')
+            logging.info('Data Ingestion component started.')
 
             data_ingestion = DataIngestion()
             train, test = data_ingestion.apply_data_ingestion()
 
-            logging.info('Train and test entire sets obtained (artifacts).')
+            logging.info('Finished Data Ingestion component. Train and test entire sets obtained (artifacts).')
 
-            logging.info('Applying all the preprocessing steps required with data_transformation component.')
+            logging.info('Data Transformation component started.')
             
             data_transformation = DataTransformation()
             train_prepared, test_prepared, _ = data_transformation.apply_data_transformation(train, test)
 
-            logging.info('Train and test entire prepared sets obtained.')
+            logging.info('Finished Data Transformation component. Train and test entire prepared sets obtained (artifacts).')
 
-            logging.info('Train and save the best model using the best hyperparameters found during the modelling notebook analysis using model_trainer component.')
+            logging.info('Model Trainer component started.')
             
             model_trainer = ModelTrainer()
 
-            logging.info('Final best model obtained (artifacts).')
+            logging.info('Finished Model Trainer component. Final best model obtained (artifacts).')
 
             class_report, auc_score = model_trainer.apply_model_trainer(train_prepared, test_prepared)
             print('Final model classification report:')
             print(f'\n{class_report}')
             print(f'\nFinal model roc-auc score:')
             print(auc_score)
-
-            logging.info('Classification report and ROC-AUC score presented.')
 
         except Exception as e:
             raise CustomException(e, sys)
