@@ -77,13 +77,13 @@ class TrainPipeline:
             
             model_trainer = ModelTrainer()
 
-            logging.info('Finished Model Trainer component. Final best model obtained (artifacts).')
-
             class_report, auc_score = model_trainer.apply_model_trainer(train_prepared, test_prepared)
             print('Final model classification report:')
             print(f'\n{class_report}')
             print(f'\nFinal model roc-auc score:')
             print(auc_score)
+
+            logging.info('Finished Model Trainer component. Final best model obtained (artifacts).')
 
         except Exception as e:
             raise CustomException(e, sys)
