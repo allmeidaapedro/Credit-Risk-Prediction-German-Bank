@@ -13,6 +13,8 @@ from src.components import data_ingestion, data_transformation, model_trainer
 
 if __name__ == '__main__':
     try:
+        
+        logging.info('Train full pipeline started.')
 
         logging.info('Splitting the data into train and test sets with data_ingestion component.')
 
