@@ -1,5 +1,5 @@
 '''
-This script aims to execute the entire training pipeline using the components. From data ingestion, transformation and model training.
+This script aims to execute the entire training pipeline using the components. Specifically, data ingestion, transformation and model training.
 '''
 
 # Debugging and verbose.
