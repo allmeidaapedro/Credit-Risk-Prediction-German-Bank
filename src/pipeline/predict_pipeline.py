@@ -4,6 +4,7 @@ This script aims to create the predict pipeline for a simple web application whi
 
 # Debugging and verbose.
 import sys
+from src.logger import logging
 from src.exception import CustomException
 from src.utils import load_object
 
@@ -79,7 +80,7 @@ class PredictPipeline:
             logging.info('Preprocessing the input data.')
 
             prepared_data = preprocessor.transform(features)
-            
+
             logging.info('Input data prepared for prediction.')
 
             logging.info('Predicting.')
