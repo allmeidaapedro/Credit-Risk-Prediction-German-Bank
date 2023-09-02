@@ -29,7 +29,7 @@ class TrainPipeline:
     def __init__(self) -> None:
         pass
 
-    def train(self, data_ingestion, data_transformation, model_trainer):
+    def train(self):
         '''Execute the training pipeline.
 
         This method performs the following steps:
