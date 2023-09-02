@@ -59,19 +59,30 @@ class PredictPipeline:
         Note: The predictions are made by comparing the model's estimated probabilities of the customer being bad risk with a threshold value. If the probability is greater than it, the instance is classified as positive, else negative. The threshold was chosen during modelling notebook, where I saw that its value provides a recall score of 0.8 (the metric of interest).
         '''
         try:
+
+
             model_path = os.path.join('artifacts', 'model.pkl')
             preprocessor_path = os.path.join('artifacts', 'preprocessor.pkl')
+            
+            logging.info('Load model and preprocessor objects.')
 
-            print('Before loading.')
             model = load_object(file_path=model_path)
             preprocessor = load_object(file_path=preprocessor_path)
-            print(f'After loading.')
+
+            logging.info('Model and preprocessor succesfully loaded.')
+
+            logging.info('Mapping sex variable.')
 
             # Sex variable mapping needed.
             features['Sex'] = features['Sex'].map({'male': 1, 'female': 0})
 
+            logging.info('Preprocessing the input data.')
 
             prepared_data = preprocessor.transform(features)
+            
+            logging.info('Input data prepared for prediction.')
+
+            logging.info('Predicting.')
 
             # Predict using the threshold that provided a recall score of 0.8 in the modelling notebook.
             THRESHOLD = 0.4224485502220887
@@ -82,6 +93,8 @@ class PredictPipeline:
                 prediction = 'This customer presents BAD RISK'
             else:
                 prediction = 'This customer presents GOOD RISK'
+
+            logging.info('Prediction successfully made.')
 
             return prediction
 
