@@ -196,9 +196,9 @@ def plot_feature_importances(model, data):
     plt.show()
 
 
-def precision_vs_recall_curve(y_true, predicted_probas):
+def precision_recall_curve(y_true, predicted_probas):
     '''
-    Generate a precision vs recall curve based on different threshold values.
+    Generate a precision-recall curve based on different threshold values.
 
     This function calculates precision and recall values for different threshold values,
     based on the model's estimated probability of being positive.
@@ -213,8 +213,8 @@ def precision_vs_recall_curve(y_true, predicted_probas):
     # values, when compared to the model's estimated probability of being positive.
     precision, recall, threshold = precision_recall_curve(y_true, predicted_probas[:, 1])
 
-    # Plotting precision vs recall curve.
-    plt.title('Precision vs Recall Curve')
+    # Plotting precision-recall curve.
+    plt.title('Precision Recall Curve')
     plt.plot(threshold, precision[:-1], 'b--', label='Precision')
     plt.plot(threshold, recall[:-1], 'r--', label='Recall')
     plt.xlabel('Threshold')
