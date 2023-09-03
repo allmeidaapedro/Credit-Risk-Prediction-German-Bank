@@ -41,6 +41,9 @@ The following pipeline was used, based on CRISP-DM framework:
 
 <img src="images/numericalvstarget.png" width="800" height="250">
 
-<b>4.</b> Credit amount and Duration are strongly positively correlated. Credit services with longer durations generally are associated with higher credit amounts and vice-versa. Furthermore, a weak positive correlation exists between these two features and risk. This makes sense because a customer holding a credit service for a longer duration with a high credit amount taken presents higher risk.<br>
+<b>4.</b> Credit amount and Duration are strongly positively correlated. Credit services with longer durations generally are associated with higher credit amounts and vice-versa.<br>
+<b>5.</b> Customers with little saving and checking accounts tend to present higher credit risk. Particularly, almost 50% of the customers who have little checking accounts are bad risk ones.<br>
+<b>6.</b> When a customer takes credit from the bank for vacation/others and education purposes, the bank must be alert. Almost 50% of the customers who take credit for education are bad risk. Moreover, vacation/others purpose presents the higher average credit amount and duration compared to all of the other purposes. Thus, these categories represent higher risk levels.<br>
 
-<img src="images/corr_matrix.png" width="800" height="400">
+<img src="images/categoricalvstarget.png" width="800" height="250">
+<img src="images/purposevstarget.png" width="800" height="250">
