@@ -60,7 +60,7 @@ The following pipeline was used, based on CRISP-DM framework:
 <img src="images/cross_val.png">
 
 4. I tuned Random Forest model with Bayesian Search because it uses probabilistic models to intelligently explore the hyperparameter space, balancing exploration and exploitation. An important point here was to define a class_weight hyperparameter, such that the estimator was able to better learn the patterns in minority target class (bad risk customers).
-5. I evaluated the results and looked at precision-recall trade-off. Once the project aim is to predict as many as possible bad risk customers, recall is the metric of interest. Thus, I selected a threshold that provided a 0.8 recall without significantly compromising the precision score, getting the final model with satisfying results! In fact, the precision fell down just 0.01 (from 0.49 to 0.48) while the sensitivity increased at 0.12 (from o.68 to 0.8).
+5. I evaluated the results and looked at precision-recall trade-off. Once the project aim is to predict as many as possible bad risk customers, recall is the metric of interest. Thus, I selected a threshold that provided a 0.8 recall without significantly compromising the precision score, getting a final model with satisfying results! The predictions were made by comparing the model's estimated probabilities of being bad risk with this threshold. If it is greater than the threshold the instance is classified as positive, else negative. In fact, the precision fell down just 0.01 (from 0.49 to 0.48) while the sensitivity increased at 0.12 (from 0.68 to 0.8).
 
 Classification report before precision-recall trade-off balancing:
 
@@ -70,7 +70,7 @@ Classification report after precision-recall trade-off balancing:
 
 <img src="images/class_report_1.jpeg" width="479" height="182">
 
-6. Although one characteristic of ensemble models like Random Forest is the lack of interpretability, it was possible to interpret and confirm that the estimator results make sense and reinforce the insights found in the EDA (Exploratory Data Analysis) step by examining feature importances. The following features clearly demonstrated discrimination between good and high-risk customers.
+6. Although one characteristic of ensemble models like Random Forest is the lack of interpretability, it was possible to interpret and confirm that the estimator results make sense and reinforce the insights found in the EDA (Exploratory Data Analysis) step by examining feature importances. The following features clearly demonstrated discrimination between good and bad risk customers.
 
 <img src="images/feature_importances.png">
 
