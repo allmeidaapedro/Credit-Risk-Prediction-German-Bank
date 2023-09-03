@@ -40,3 +40,7 @@ The following pipeline was used, based on CRISP-DM framework:
 <b>3.</b> Customers whose credit services have a long duration present higher risk. The more time a customer spends using a credit service without paying it, the higher the risk of default.<br>
 
 <img src="images/numericalvstarget.png" width="800" height="250">
+
+<b>4.</b> Credit amount and Duration are strongly positively correlated. Credit services with longer durations generally are associated with higher credit amounts and vice-versa. Furthermore, a weak positive correlation exists between these two features and risk. This makes sense because a customer holding a credit service for a longer duration with a high credit amount taken presents higher risk.<br>
+
+<img src="images/corr_matrix.png.png" width="800" height="250">
