@@ -39,4 +39,4 @@ The following pipeline was used, based on CRISP-DM framework:
 <b>2.</b> Customers who take higher credit amounts from the bank tend to present higher risk. This makes total sense. The higher the credit amount taken, the harder it is to pay it.<br>
 <b>3.</b> Customers whose credit services have a long duration present higher risk. The more time a customer spends using a credit service without paying it, the higher the risk of default.<br>
 
-<img src="images/numericalvstarget.png" width="800" height="200">
+<img src="images/numericalvstarget.png" width="800" height="250">
