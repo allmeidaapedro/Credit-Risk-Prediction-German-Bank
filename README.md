@@ -102,17 +102,16 @@ git clone https://github.com/allmeidaapedro/Credit-Risk-Prediction-German-Bank.g
 cd Credit-Risk-Prediction-German-Bank
 </pre>
 
-2. Create and Activate a Virtual Environment:
+2. Activate the Virtual Environment:
 
-Create a virtual environment to isolate project dependencies
+Activate the virtual environment used to isolate the project dependencies.
 <pre>
-python -m venv venv
 source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'
 </pre>
 
 3. Install Dependencies:
 
-Use pip to install the required dependencies listed in the requirements.txt file:
+Use pip to install the required dependencies listed in the requirements.txt file.
 <pre>
 pip install -r requirements.txt
 </pre>
@@ -133,7 +132,7 @@ To stop the application, you can typically press Ctrl+C in the terminal where th
 
 7. Deactivate the Virtual Environment:
 
-When you're done with your project, deactivate the virtual environment:
+When you're done with your project, deactivate the virtual environment.
 
 <pre>
 deactivate
