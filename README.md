@@ -39,7 +39,7 @@ The following pipeline was used, based on CRISP-DM framework:
 <b>2.</b> Customers who take higher credit amounts from the bank tend to present higher risk. This makes total sense. The higher the credit amount taken, the harder it is to pay it.<br>
 <b>3.</b> Customers whose credit services have a long duration present higher risk. The more time a customer spends using a credit service without paying it, the higher the risk of default.<br>
 
-<img src="images/numericalvstarget.png" width="800" height="250">
+<img src="images/numericalvstarget.png" width="800" height="450">
 
 <b>4.</b> Credit amount and Duration are strongly positively correlated. Credit services with longer durations generally are associated with higher credit amounts and vice-versa.<br>
 
@@ -49,4 +49,4 @@ The following pipeline was used, based on CRISP-DM framework:
 <b>6.</b> When a customer takes credit from the bank for vacation/others and education purposes, the bank must be alert. Almost 50% of the customers who take credit for education are bad risk. Moreover, vacation/others purpose presents the higher average credit amount and duration compared to all of the other purposes. Thus, these categories represent higher risk levels.<br>
 
 <img src="images/categoricalvstarget.png" width="800" height="450">
-<img src="images/purposevstarget.png" width="800" height="250">
+<img src="images/purposevstarget.png" width="800" height="450">
