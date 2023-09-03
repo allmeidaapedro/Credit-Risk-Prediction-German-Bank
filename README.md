@@ -48,7 +48,7 @@ The following pipeline was used, based on CRISP-DM framework:
 <b>5.</b> Customers with little saving and checking accounts tend to present higher credit risk. Particularly, almost 50% of the customers who have little checking accounts are bad risk ones. Moreover, when a customer takes credit from the bank for vacation/others and education purposes, it must be alert. Specifically, almost 50% of the customers who took credit for education are bad risk.<br>
 
 <img src="images/categoricalvstarget.png" width="800" height="450">
-<img src="images/purposevstarget.png" width="800" height="250">
+<img src="images/purposevstarget.png">
 
 # 5. Modelling
 1. I chose a set of models for performance comparison, analyzing the ROC-AUC score. Accuracy is not a good metric because the target is imbalanced.
