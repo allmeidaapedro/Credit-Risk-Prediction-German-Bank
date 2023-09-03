@@ -62,10 +62,10 @@ The following pipeline was used, based on CRISP-DM framework:
 
 Classification report before precision-recall trade-off balancing:
 
-<img src="images/class_report_2.jpeg" width="300" height="200">
+<img src="images/class_report_2.jpeg" width="479" height="182">
 
 Classification report after precision-recall trade-off balancing:
 
-<img src="images/class_report_1.jpeg" width="300" height="200">
+<img src="images/class_report_1.jpeg" width="479" height="182">
 
 Finally, the results are satisfying, and the project objective was achieved. The model can predict 80% of the bad risk customers, effectively solving the business problem. In summary, to address the imbalanced target, I implemented strategies such as stratified hold-out and k-fold cross-validation, utilized class-weight hyperparameter, and balanced precision-recall trade-off.
