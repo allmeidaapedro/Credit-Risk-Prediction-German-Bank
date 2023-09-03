@@ -79,11 +79,11 @@ Finally, the results are satisfying, and the project objective was achieved. The
 # 6. Web app and next steps
 Once I built a model that solves the business problem by identifying 80% of the bad risk customers, I developed a Flask web app such that we can get predictions for any customer by giving the input features information. For the next steps, I will be focused on deploying this app in a cloud like AWS (I already defined a file containing Elastic Beanstalk configuration, .ebextensions/config.py). Anyway, I describe in the next topic how you can run this project on your local machine.
 
-Web app home page
+Web app home page:
 
 <img src="images/web_app_1.jpeg">
 
-Web app predictions page
+Web app predictions page:
 
 <img src="images/web_app_2.jpeg">
 
@@ -124,7 +124,7 @@ python application.py
 
 5. Access the Project Locally:
 
-After running successfully, you can access your project locally. Open a web browser and navigate to http://127.0.0.1:5000/
+After running successfully, you can access the project locally. Open a web browser and navigate to http://127.0.0.1:5000/
 
 Then, go to the prediction page, select the input features values and click on submit. The prediction result will appear on the right side.
 
@@ -134,7 +134,7 @@ To stop the application, you can typically press Ctrl+C in the terminal where th
 
 7. Deactivate the Virtual Environment:
 
-When you're done with your project, deactivate the virtual environment.
+When you're done with the project, deactivate the virtual environment.
 
 <pre>
 deactivate
