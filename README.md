@@ -124,6 +124,7 @@ python application.py
 5. Access the Project Locally:
 
 After running successfully, you can access your project locally. Open a web browser and navigate to http://127.0.0.1:5000/
+
 Then, go to the prediction page, select the input features values and click on submit. The prediction result will appear on the right side.
 
 6. Shutdown the Application:
