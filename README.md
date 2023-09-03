@@ -52,6 +52,11 @@ The following pipeline was used, based on CRISP-DM framework:
 <img src="images/categoricalvstarget.png">
 <img src="images/purposevstarget.png">
 
+6. On average, customers who have highly skilled jobs, free housing, and vacation/other purposes tend to borrow larger credit amounts from the bank and, consequently, for longer durations, presenting higher levels of risk.
+
+<img src="images/categoric_credit_amount.png">
+<img src="images/purpose_credit_amount.png">
+
 # 5. Modelling
 1. I chose a set of models for performance comparison, analyzing the ROC-AUC score. Accuracy is not a good metric because the target is imbalanced.
 2. In order to select the best model for hyperparameter tuning and final evaluation, I trained and evaluated each of the models using stratified k-fold cross-validation, which provides a more reliable performance estimate.
