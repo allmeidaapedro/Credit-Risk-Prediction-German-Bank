@@ -85,3 +85,60 @@ Web app home page
 Web app predictions page
 
 <img src="images/web_app_2.jpeg">
+
+# 7. Run this project on your local machine
+Prerequisites:
+
+Before getting started, make sure you have the following installed on your machine:
+- Python
+- pip (Python package manager)
+- Git (Version control tool)
+
+Steps:
+
+1. Clone the repository:
+<pre>
+'''bash
+git clone https://github.com/allmeidaapedro/Credit-Risk-Prediction-German-Bank.git
+cd Credit-Risk-Prediction-German-Bank
+'''
+</pre>
+
+2. Create and Activate a Virtual Environment:
+Create a virtual environment to isolate project dependencies
+<pre>
+'''bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'
+'''
+</pre>
+
+3. Install Dependencies:
+Use pip to install the required dependencies listed in the requirements.txt file:
+<pre>
+'''bash
+pip install -r requirements.txt
+'''
+</pre>
+
+4. Run the Application:
+<pre>
+'''bash
+python application.py
+'''
+</pre>
+
+5. Access the Project Locally:
+After running successfully, you can access your project locally. Open a web browser and navigate to http://127.0.0.1:5000/
+
+6. Shutdown the Application:
+To stop the application, you can typically press Ctrl+C in the terminal where the application is running.
+
+7. Deactivate the Virtual Environment:
+When you're done with your project, deactivate the virtual environment:
+
+<pre>
+'''bash
+deactivate
+'''
+</pre>
