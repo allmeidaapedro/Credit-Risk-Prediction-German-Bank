@@ -137,3 +137,7 @@ When you're done with your project, deactivate the virtual environment.
 <pre>
 deactivate
 </pre>
+
+# 8. Dataset link
+The dataset was collected from kaggle and it belongs to UCI machine learning repository.
+Link: https://www.kaggle.com/datasets/kabure/german-credit-data-with-risk
