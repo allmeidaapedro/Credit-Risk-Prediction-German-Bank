@@ -99,10 +99,10 @@ class ModelTrainer:
 
             logging.info('Started to train the best Random Forest model with the best hyparameters found in modelling step using stratified k-fold cross validation along with bayesian optimization.')
 
-            best_model = RandomForestClassifier(bootstrap=True, class_weight='balanced_subsample',
-                                           criterion='log_loss', max_depth=8,
-                                           max_features='log2', min_samples_leaf=7,
-                                           min_samples_split=2, n_estimators=322)
+            best_model = RandomForestClassifier(bootstrap=True, class_weight='balanced',
+                                           criterion='entropy', max_depth=7,
+                                           max_features='sqrt', min_samples_leaf=22,
+                                           min_samples_split=39, n_estimators=146)
 
             best_model.fit(X_train_prepared, y_train)
 
