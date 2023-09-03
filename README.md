@@ -21,7 +21,7 @@
 
 By employing <b>predictive models</b>, the <b>bank</b> can make <b>informed decisions</b> that <b>balance profit generation with prudent risk management</b>, ultimately benefiting both the institution and its customers. Thus, the <b>project objective is to build a model that is able to identify as many as possible bad risk customers and provide valuable insights about credit risk within the available features.</b> By doing this, the business problem is solved.
 
-# 3. Project pipeline
+# 3. Solution pipeline
 The following pipeline was used, based on CRISP-DM framework:
 
 <b>1. Define the business problem.</b><br>
