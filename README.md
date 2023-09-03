@@ -49,3 +49,10 @@ The following pipeline was used, based on CRISP-DM framework:
 
 <img src="images/categoricalvstarget.png" width="800" height="450">
 <img src="images/purposevstarget.png" width="800" height="250">
+
+# 5. Modelling
+1. I chose a set of models for performance comparison, analyzing the ROC-AUC score. Accuracy is not a good metric because the target is imbalanced.
+2. In order to select the best model for hyperparameter tuning and final evaluation, I trained and evaluated each of the models using stratified k-fold cross-validation, which provides a more reliable performance estimate.
+3. Although Logistic Regression had the best average validation score, I chose Random Forest for the next steps because there was more room for performance improvement with it. It was overfitting, and I could apply some regularization techniques to enhance its generalization ability.
+
+<img src="images/cross_val.png" width="800" height="250">
