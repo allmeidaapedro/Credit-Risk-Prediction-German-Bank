@@ -56,3 +56,12 @@ The following pipeline was used, based on CRISP-DM framework:
 3. Although Logistic Regression had the best average validation score, I chose Random Forest for the next steps because there was more room for performance improvement with it. It was overfitting, and I could apply some regularization techniques to enhance its generalization ability.
 
 <img src="images/cross_val.png" width="800" height="250">
+
+4. I tuned Random Forest model with Bayesian Search because it uses probabilistic models to intelligently explore the hyperparameter space, balancing exploration and exploitation. An important point here was to define a class_weight hyperparameter, such that the estimator was able to better learn the patterns in minority target class (bad risk customers).
+5. I evaluated the results and looked at precision-recall trade-off. Once the project aim is to predict as many as possible bad risk customers, recall is the metric of interest. Thus, I selected a threshold that provided a 0.8 recall without significantly compromising the precision score, getting the final model with satisfying results! In fact, the precision fell down just 0.01 (from 0.49 to 0.48) while the recall increased at 0.12 (from o.68 to 0.8).
+
+Classification report before precision-recall trade-off balancing:
+<img src="images/class_report_1.jpeg" width="800" height="250">
+
+Classification report after precision-recall trade-off balancing:
+<img src="images/class_report_2.jpeg" width="800" height="250">
