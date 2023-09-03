@@ -20,3 +20,16 @@
 6. Strengthen trust
 
 By employing <b>predictive models</b>, the <b>bank</b> can make <b>informed decisions</b> that <b>balance profit generation with prudent risk management</b>, ultimately benefiting both the institution and its customers. Thus, the <b>project objective is to build a model that is able to identify as many as possible bad risk customers and provide valuable insights about credit risk within the available features.</b> By doing this, the business problem is solved.
+
+# 3. Project pipeline
+The following pipeline was used, based on CRISP-DM framework:
+
+<b>1. Define the business problem.</b><br>
+<b>2. Collect the data and get a general overview of it.</b><br>
+<b>3. Split the data into train and test sets.</b><br>
+<b>4. Explore the data (exploratory data analysis)</b><br>
+<b>5. Data cleaning and preprocessing.</b><br>
+<b>6. Model training, comparison, selection and tuning.</b><br>
+<b>7. Final production model testing and evaluation.</b><br>
+<b>8. Conclude and interpret the model results.</b><br>
+<b>9. Deploy.</b><br>
