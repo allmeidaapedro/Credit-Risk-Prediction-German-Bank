@@ -98,38 +98,31 @@ Steps:
 
 1. Clone the repository:
 <pre>
-'''bash
 git clone https://github.com/allmeidaapedro/Credit-Risk-Prediction-German-Bank.git
 cd Credit-Risk-Prediction-German-Bank
-'''
 </pre>
 
 2. Create and Activate a Virtual Environment:
 Create a virtual environment to isolate project dependencies
 <pre>
-'''bash
 python -m venv venv
 source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'
-'''
 </pre>
 
 3. Install Dependencies:
 Use pip to install the required dependencies listed in the requirements.txt file:
 <pre>
-'''bash
 pip install -r requirements.txt
-'''
 </pre>
 
 4. Run the Application:
 <pre>
-'''bash
 python application.py
-'''
 </pre>
 
 5. Access the Project Locally:
 After running successfully, you can access your project locally. Open a web browser and navigate to http://127.0.0.1:5000/
+Then, go to the prediction page, select the input features values and click on submit. The prediction result will appear on the right side.
 
 6. Shutdown the Application:
 To stop the application, you can typically press Ctrl+C in the terminal where the application is running.
@@ -138,7 +131,5 @@ To stop the application, you can typically press Ctrl+C in the terminal where th
 When you're done with your project, deactivate the virtual environment:
 
 <pre>
-'''bash
 deactivate
-'''
 </pre>
