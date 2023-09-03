@@ -1,2 +1,2 @@
 # German Bank Credit Risk Prediction
-![Estrutura do Projeto](images/german_bank.jpg.png)
+![Estrutura do Projeto](D:\MLProjects\CreditRiskPredictionGermanBank\images\german_bank.jpg)
