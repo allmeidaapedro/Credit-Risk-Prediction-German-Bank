@@ -76,7 +76,7 @@ Classification report after precision-recall trade-off balancing:
 
 <img src="images/class_report_1.jpeg" width="479" height="182">
 
-6. Although one characteristic of ensemble models like Random Forest is the lack of interpretability, it was possible to interpret and confirm that the estimator results make sense and reinforce the insights found in the EDA (Exploratory Data Analysis) step by examining feature importances. The following features clearly demonstrated discrimination between good and bad risk customers.
+7. Although one characteristic of ensemble models like Random Forest is the lack of interpretability, it was possible to interpret and confirm that the estimator results make sense and reinforce the insights found in the EDA (Exploratory Data Analysis) step by examining feature importances. The following features clearly demonstrated discrimination between good and bad risk customers.
 
 <img src="images/feature_importances.png">
 
