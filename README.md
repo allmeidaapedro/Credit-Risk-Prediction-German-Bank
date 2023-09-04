@@ -152,3 +152,10 @@ deactivate
 The dataset was collected from kaggle and it belongs to UCI machine learning repository.
 
 Link: https://www.kaggle.com/datasets/kabure/german-credit-data-with-risk
+
+# 9. Contact me
+Linkedin: https://www.linkedin.com/in/pedro-henrique-almeida-oliveira-77b44b237/
+
+Github: https://github.com/allmeidaapedro
+
+Gmail: pedrooalmeida.net@gmail.com
