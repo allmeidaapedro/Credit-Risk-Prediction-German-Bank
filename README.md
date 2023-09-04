@@ -63,7 +63,7 @@ Each step is approached in detail inside the notebooks, where I explain the deci
 1. For preprocessing, I applied OrdinalEncoder on categorical features with ordinal relationships after imputing their missing values with mode and TargetEncoder for the others. I didn't apply OneHotEncoder because increasing dimensionality would favor overfitting as I have a little amount of data. Moreover, I applied StandardScaler on numeric and categoric attributes (after encoded) because a lot of outliers were present and it is more robust to it than MinMaxScaler, which uses range. Tree-based models don't require feature scaling but, as I intended to compare different algorithms at once, I performed it.
 2. I chose a set of models for performance comparison, analyzing the ROC-AUC score. Accuracy is not a good metric because the target is imbalanced.
 3. In order to select the best model for hyperparameter tuning and final evaluation, I trained and evaluated each of the models using stratified k-fold cross-validation, which provides a more reliable performance estimate.
-4. Although Logistic Regression had the best average validation score, I chose Random Forest for the next steps because there was more room for performance improvement with it. It was overfitting, and I could apply some regularization techniques to enhance its generalization ability.
+4. Although Logistic Regression had the best average validation score, I chose Random Forest for the next steps because there was more room for performance improvement with it. It was overfitting (low bias and high variance), and I could apply some regularization techniques to enhance its generalization ability.
 
 <img src="images/cross_val.png">
 
