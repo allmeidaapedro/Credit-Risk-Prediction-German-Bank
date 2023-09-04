@@ -5,9 +5,11 @@
 # 1. Description
 - This is an end to end machine learning project using Random Forest to predict credit risk of German Bank's customers. It involves supervised learning (using a labeled training set) for classification, where the target is 1 if the customer represents a bad risk and 0 if he represents a good risk.
 - I implemented this project following some CI/CD principles and using modular coding. First, I developed my entire analysis (from EDA to modeling) in notebooks. Then, I divided the project development into components responsible for data ingestion, transformation, and model training, following the same steps as in the notebooks. Once I had done this, I created scripts for automating the training and prediction pipelines using these components. The training pipeline executes them and obtains all the machine learning model artifacts, while the prediction pipeline makes predictions by consuming the obtained artifacts. All of this was made with good practices like virtual environment use (isolating dependencies), exception handling, loggings, documentation (every script/function/class purposes and definitions are defined inside the files), etc. Afterward, I built a web app in Flask, integrating everything mentioned above. My objective with this was to get closer to a real data science project workflow by packaging my entire project as a package.
+
+# 2. Technologies
 - The technologies and tools used were Python (Pandas, Numpy, Matplotlib, Seaborn, Scikit-Learn, Category-Encoders, Scikit-Optimize, Xgboost, Flask), Jupyter Notebook, Git and Github (version control), machine learning classification algorithms, statistics, Anaconda (terminal) and Visual Studio Code (project development environment).
 
-# 2. Business problem and project objective
+# 3. Business problem and project objective
 Predict credit risk of German Bank's customers.
 
 Credit risk refers to the potential financial loss that a lender, such as a bank, might incur if a borrower fails to repay a loan or credit obligation. It's the uncertainty about whether borrowers will honor their financial commitments.
@@ -23,7 +25,7 @@ The German Bank aims to predict their customers' credit risk for several reasons
 
 By employing predictive models, the bank can make informed decisions that balance profit generation with prudent risk management, ultimately benefiting both the institution and its customers. Thus, the project objective is to build a model that is able to identify as many as possible bad risk customers and provide valuable insights about credit risk within the available features. By doing this, the business problem is solved.
 
-# 3. Solution pipeline
+# 4. Solution pipeline
 The following pipeline was used, based on CRISP-DM framework:
 
 1. Define the business problem.
@@ -38,7 +40,7 @@ The following pipeline was used, based on CRISP-DM framework:
 
 Each step is approached in detail inside the notebooks, where I explain the decisions made.
 
-# 4. Main business insights
+# 5. Main business insights
 1. Young customers tend to present higher credit risk. This makes sense since younger people usually don't have financial stability.
 2. Customers who take higher credit amounts from the bank tend to present higher risk. This makes total sense. The higher the credit amount taken, the harder it is to pay it.
 3. Customers whose credit services have a long duration present higher risk. The more time a customer spends using a credit service without paying it, the higher the risk of default.
@@ -59,7 +61,7 @@ Each step is approached in detail inside the notebooks, where I explain the deci
 <img src="images/categoric_credit_amount.png">
 <img src="images/purpose_credit_amount.png">
 
-# 5. Modelling
+# 6. Modelling
 1. For preprocessing, I applied OrdinalEncoder on categorical features with ordinal relationships after imputing their missing values with mode and TargetEncoder for the others. I didn't apply OneHotEncoder because increasing dimensionality would favor overfitting as I have a little amount of data. Moreover, I applied StandardScaler on numeric and categoric attributes (after encoded) because a lot of outliers were present and it is more robust to it than MinMaxScaler, which uses range. Tree-based models don't require feature scaling but, as I intended to compare different algorithms at once, I performed it.
 2. I chose a set of models for performance comparison, analyzing the ROC-AUC score. Accuracy is not a good metric because the target is imbalanced.
 3. In order to select the best model for hyperparameter tuning and final evaluation, I trained and evaluated each of the models using stratified k-fold cross-validation, which provides a more reliable performance estimate.
@@ -84,7 +86,7 @@ Classification report after precision-recall trade-off balancing:
 
 Finally, the results are satisfying and the project objective was achieved. The model can predict 80% of the bad risk customers, effectively solving the business problem. In summary, to address the imbalanced target, I implemented strategies such as stratified hold-out and k-fold cross-validation, utilized class-weight hyperparameter, and balanced precision-recall trade-off.
 
-# 6. Web app and next steps
+# 7. Web app and next steps
 Once I built a model that solves the business problem by identifying 80% of the bad risk customers, I developed a Flask web app such that we can get predictions for any customer by giving the input features information. For the next steps, I will be focused on deploying this app in a cloud like AWS (I already defined a file containing Elastic Beanstalk configuration, .ebextensions/config.py). Anyway, I describe in the next topic how you can run this project on your local machine.
 
 Web app home page:
@@ -95,7 +97,7 @@ Web app predictions page:
 
 <img src="images/web_app_2.jpeg">
 
-# 7. Run this project on your local machine
+# 8. Run this project on your local machine
 Prerequisites:
 
 Before getting started, make sure you have the following installed on your machine:
@@ -148,12 +150,12 @@ When you're done with the project, deactivate the virtual environment.
 deactivate
 </pre>
 
-# 8. Dataset link
+# 9. Dataset link
 The dataset was collected from kaggle and it belongs to UCI machine learning repository.
 
 Link: https://www.kaggle.com/datasets/kabure/german-credit-data-with-risk
 
-# 9. Contact me
+# 10. Contact me
 Linkedin: https://www.linkedin.com/in/pedro-henrique-almeida-oliveira-77b44b237/
 
 Github: https://github.com/allmeidaapedro
