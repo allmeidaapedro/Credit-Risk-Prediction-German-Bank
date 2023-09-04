@@ -38,7 +38,7 @@ The following pipeline was used, based on CRISP-DM framework:
 8. Conclude and interpret the model results.
 9. Deploy.
 
-Each step is approached in detail inside the notebooks, where I explain the decisions made.
+Each step is explained in detail inside the notebooks, where I provide the rationale for the decisions made
 
 # 5. Main business insights
 1. Young customers tend to present higher credit risk. This makes sense since younger people usually don't have financial stability.
