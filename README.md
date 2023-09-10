@@ -101,7 +101,7 @@ Web app predictions page:
 Prerequisites:
 
 Before getting started, make sure you have the following installed on your machine:
-- Python
+- Python 3.11.4
 - pip (Python package manager)
 - Git (Version control tool)
 
